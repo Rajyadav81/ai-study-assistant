@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Study Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 AI Study Assistant</h1>
+
+    <div class="card">
+      <h2>📂 Upload PDF</h2>
+      <input type="file" id="pdf-upload" accept="application/pdf" />
+      <button onclick="extractPDFText()">📤 Upload & Extract</button>
+      <pre id="output">Waiting for upload...</pre>
+    </div>
+
+    <div class="card">
+      <h2>🤖 Ask Your Question</h2>
+      <input type="text" id="question" placeholder="e.g. What is Newton's law?" />
+      <button onclick="searchQuestion()">💬 Get AI Answer</button>
+      <div id="answerBox">Your answer will appear here...</div>
+    </div>
+  </div>
+  
+  <div id="loadingBox" style="display:none; margin-top: 10px;">
+  <span class="loader"></span> Generating smart answer...
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
